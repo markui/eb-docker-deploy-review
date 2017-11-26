@@ -1,0 +1,7 @@
+EC2 Deploy Project
+
+
+settings.py의
+    STATIC_URL로 접근했을 때 mysite/static/폴더를 참조하도록
+    STATIC_DIR변수 및 STATICFILES_DIRS 항목을 작성
+
