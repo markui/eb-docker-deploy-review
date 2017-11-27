@@ -41,6 +41,7 @@ RUN         apt-get -y install nginx
 RUN         apt-get -y install supervisor
 
 # 파일 복사 및 requirements 설치
+ENV         LANG C.UTF-8
 COPY        requirements.txt /srv/requirements.txt
 RUN         /root/.pyenv/versions/app/bin/pip install --default-timeout=100 future
 RUN         /root/.pyenv/versions/app/bin/pip install -r \
