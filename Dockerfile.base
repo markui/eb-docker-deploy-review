@@ -1,6 +1,8 @@
 FROM        ubuntu:16.04
 MAINTAINER  viking617617@gmail.com
 
+ENV         LANG C.UTF-8
+
 RUN         apt-get -y update
 RUN         apt-get -y dist-upgrade
 RUN         apt-get install -y python-pip git vim
@@ -37,3 +39,9 @@ RUN         apt-get -y install nginx
 
 # supervisor install
 RUN         apt-get -y install supervisor
+
+# 파일 복사 및 requirements 설치
+COPY        requirements.txt /srv/requirements.txt
+RUN         /root/.pyenv/versions/app/bin/pip install --default-timeout=100 future
+RUN         /root/.pyenv/versions/app/bin/pip install -r \
+            /srv/requirements.txt
