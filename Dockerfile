@@ -1,4 +1,4 @@
-FROM        base
+FROM        viking617/base
 MAINTAINER  viking617617@gmail.com
 
 ENV         LANG C.UTF-8
@@ -30,3 +30,5 @@ RUN         mkdir -p /var/log/uwsgi/app
 RUN         cp /srv/app/.config/supervisor/* \
                 /etc/supervisor/conf.d/
 CMD         supervisord -n
+
+EXPOSE      80
