@@ -3,6 +3,7 @@
 .static_root/
 .config_secret/
 
+
 # Created by https://www.gitignore.io/api/linux,macos,python,django,pycharm
 
 ### Django ###
@@ -232,4 +233,4 @@ venv.bak/
 !.elasticbeanstalk/*.global.yml
 
 
-!.config_secret
+!.config_secret/
